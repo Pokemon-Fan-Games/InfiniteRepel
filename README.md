@@ -17,4 +17,4 @@ Descarga el archivo `infinite_repel.rb` de la carpeta `pokemon_essentials_v16` d
 
 ## Pasos para V17+
 
-Descarga la carpeta de plugins del [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificara los archivos, pero no te preocupes, no hay conflicto entre ellos.
+Descarga la carpeta `Plugins` del [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificara los archivos, pero no te preocupes, no hay conflicto entre ellos.
