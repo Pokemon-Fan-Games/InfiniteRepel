@@ -15,6 +15,10 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
 
 Descarga el archivo `infinite_repel.rb` que está en el zip `pokemon_essentials_v16.zip` del [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y crealo en los scripts de tu proyecto encima de Main.
 
-## Pasos para V17+
+## Pasos para V17
 
-Descarga la carpeta `Plugins` que está en el zip `pokemon_essentials_v17+.zip` [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificará los archivos, pero no te preocupes, no hay conflicto entre ellos.
+Descarga el archivo `infinite_repel.rb` que está en el zip `pokemon_essentials_v17.zip` del [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y crealo en los scripts de tu proyecto encima de Main.
+
+## Pasos para V18+
+
+Descarga la carpeta `Plugins` que está en el zip `pokemon_essentials_v18+.zip` [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificará los archivos, pero no te preocupes, no hay conflicto entre ellos.
