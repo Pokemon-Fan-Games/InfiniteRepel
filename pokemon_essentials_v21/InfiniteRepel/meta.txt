@@ -1,0 +1,5 @@
+Name       = Infinite Repel
+Version    = 1.1.0
+Essentials = 21.1
+Website    = https://github.com/Pokemon-Fan-Games/InifiniteRepel
+Credits    = dpertierra
