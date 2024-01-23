@@ -5,8 +5,19 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
 # Implementacion
 
 1. Crea el item en el PBS/items.txt con el siguiente formato:
-   `XXX,INFREPEL,Repelente Infinito,Repelente Infinito,8,0,"Repelente infinito activalo y desactivalo cuando quieras",2,0,6,,,false`
+   1. Hasta V20 `XXX,INFREPEL,Repelente Infinito,Repelente Infinito,8,0,"Repelente infinito activalo y desactivalo cuando quieras",2,0,6,,,false`
    Reemplaza XXX por el siguiente número disponible en la lista de items.
+   2. V21 Agrega el siguiente codigo al items.txt
+      ```
+      [INFREPEL]
+      Name = Repelente Infinito
+      NamePlural = Repelente Infinito
+      Pocket = 8
+      Price = 0
+      FieldUse = Direct
+      Flags = KeyItem
+      Description = Un repelente que nunca se gasta, solo activalo o desactivalo cuando lo necesites.
+      ```
 2. **OPCIONAL** agregar un ícono para el item:
    1. En Essentials V16 a V18: Crea un icono para el item en Graphics/Icons con el nombre "iconxxx.png" donde xxx es el número del item.
    2. En Essentials V19+: Crea un icono para el item en Graphics/Icons con el nombre "INFREPEL.png".
@@ -56,6 +67,8 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
       commands[cmdUse=commands.length]=_INTL("Activar") if item == PBItems::INFREPEL && !$PokemonGlobal.infRepel
       commands[cmdUse=commands.length]=_INTL("Desactivar") if item == PBItems::INFREPEL && $PokemonGlobal.infRepel
       ```
+   4. _**En Essentials V19+:**_
+      1. Solo descarga del release el Plugin y copialo a la carpeta de Plugins de tu proyecto.
 
 ## Pasos para V16
 
@@ -67,4 +80,8 @@ Descarga el archivo `infinite_repel.rb` que está en el zip `pokemon_essentials_
 
 ## Pasos para V18+
 
-Descarga la carpeta `Plugins` que está en el zip `pokemon_essentials_v18+.zip` [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificará los archivos, pero no te preocupes, no hay conflicto entre ellos.
+Descarga la carpeta `Plugins` que está en el zip `pokemon_essentials_v18_20.zip` [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificará los archivos, pero no te preocupes, no hay conflicto entre ellos.
+
+## Pasos para V21
+
+Descarga la carpeta `Plugins` que está en el zip `pokemon_essentials_21.zip` [release](https://github.com/Pokemon-Fan-Games/InfiniteRepel/releases/latest) y pegala en la carpeta de tu proyecto. Windows unificará los archivos, pero no te preocupes, no hay conflicto entre ellos.
