@@ -37,6 +37,7 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
       ```
    2. _**En Essentials V21:**_
       1. Solo descarga del release el Plugin y copialo a la carpeta de Plugins de tu proyecto.
+      2. For english users, you can change the lang variable in the infinite_repel.rb file.
 
 ## Pasos para V16
 
