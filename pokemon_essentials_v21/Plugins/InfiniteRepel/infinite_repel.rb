@@ -43,6 +43,7 @@ def pbBattleOnStepTaken(repel_active)
 end
 
 if ADD_REPEL_TOGGLE_TO_POKEGEAR
+  # Contribution by enomic_atom
   MenuHandlers.add(:pokegear_menu, :infrepel, {
     "name"      =>  INFREPEL_POKEGEAR,
     "icon_name" => "infrepel",
