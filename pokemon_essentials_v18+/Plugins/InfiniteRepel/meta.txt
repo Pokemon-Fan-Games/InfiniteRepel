@@ -1,4 +1,0 @@
-Name       = Infinite Repel
-Version    = 1.0.0
-Website    = https://github.com/Pokemon-Fan-Games/InifiniteRepel
-Credits    = dpertierra

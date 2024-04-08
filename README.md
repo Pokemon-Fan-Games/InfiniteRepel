@@ -35,39 +35,7 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
       commands[cmdUse=commands.length]=_INTL("Activar") if item == PBItems::INFREPEL && !$PokemonGlobal.infRepel
       commands[cmdUse=commands.length]=_INTL("Desactivar") if item == PBItems::INFREPEL && $PokemonGlobal.infRepel
       ```
-   2. _**En Essentials V18:**_
-      1. En el script `PScreen_Bag` arriba de la declaracion de la clase `PokemonBagScreen` agregar este snippet para tener acceso al atributo infRepel del $PokemonGlobal:
-      ```ruby
-      class PokemonGlobalMetadata
-         attr_accessor :infRepel
-      end
-      ```
-      2. En el script `PScreen_Bag` en el método `pbStartScreen` buscar el siguiente if `if ItemHandlers.hasOutHandler(item) || (pbIsMachine?(item) && $Trainer.party.length>0)` envolver esa condición entre parentesís y agregar la condición `&& item != PBItems::INFREPEL` al final de la condición, deberia quedar asi:
-      ```ruby
-      if ( ItemHandlers.hasOutHandler(item) || (pbIsMachine?(item) && $Trainer.party.length>0) ) && item != PBItems::INFREPEL  
-      ```
-      3. Luego debajo de todo ese bloque de if, agregar estas 2 lineas:
-      ```ruby
-      commands[cmdUse=commands.length]=_INTL("Activar") if item == PBItems::INFREPEL && !$PokemonGlobal.infRepel
-      commands[cmdUse=commands.length]=_INTL("Desactivar") if item == PBItems::INFREPEL && $PokemonGlobal.infRepel
-      ```
-   3. _**En Essentials V19+:**_
-      1. En el script `UI_Bag` arriba de la declaracion de la clase `PokemonBagScreen` agregar este snippet para tener acceso al atributo infRepel del $PokemonGlobal:
-      ```ruby
-      class PokemonGlobalMetadata
-         attr_accessor :infRepel
-      end
-      ```
-      2. En el script `UI_Bag` en el método `pbStartScreen` buscar el siguiente if `if ItemHandlers.hasOutHandler(item) || (itm.is_machine? && $Trainer.party.length>0)` envolver esa condición entre parentesís y agregar la condición `&& item != PBItems::INFREPEL` al final de la condición, deberia quedar asi:
-      ```ruby
-      if (ItemHandlers.hasOutHandler(item) || (itm.is_machine? && $Trainer.party.length>0)) && item != PBItems::INFREPEL
-      ```
-      3. Luego debajo de todo ese bloque de if, agregar estas 2 lineas:
-      ```ruby
-      commands[cmdUse=commands.length]=_INTL("Activar") if item == PBItems::INFREPEL && !$PokemonGlobal.infRepel
-      commands[cmdUse=commands.length]=_INTL("Desactivar") if item == PBItems::INFREPEL && $PokemonGlobal.infRepel
-      ```
-   4. _**En Essentials V19+:**_
+   2. _**En Essentials V21:**_
       1. Solo descarga del release el Plugin y copialo a la carpeta de Plugins de tu proyecto.
 
 ## Pasos para V16
