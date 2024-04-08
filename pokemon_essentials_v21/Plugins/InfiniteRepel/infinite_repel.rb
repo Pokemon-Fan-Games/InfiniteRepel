@@ -5,7 +5,7 @@
 #===============================================================================
 
 LANG = "es" # Change to "en" for English
-
+ADD_REPEL_TOGGLE_TO_POKEGEAR = true # Set to false to disable the repel toggle in the Pokegear menu
 if LANG == "es"
   INFREPEL_MESSAGE = "Se activó el repelente infinito."
   INFREPEL_MESSAGE_OFF = "Se desactivó el repelente infinito."
@@ -38,4 +38,17 @@ ItemHandlers::UseText.add(:INFREPEL, proc { |item| next ($PokemonGlobal.infRepel
 alias pbBattleOnStepTakenOverride pbBattleOnStepTaken 
 def pbBattleOnStepTaken(repel_active)
   pbBattleOnStepTakenOverride($PokemonGlobal.infRepel)
+end
+
+if ADD_REPEL_TOGGLE_TO_POKEGEAR
+  MenuHandlers.add(:pokegear_menu, :infrepels, {
+    "name"      =>  _INTL("Infinite Repel"),
+    "icon_name" => "infrepel",
+    "order"     => 70,
+    "effect"    => proc { |menu|
+    pbFadeOutIn {
+      pbToggleInfiniteRepel
+    }
+    }
+  })
 end
