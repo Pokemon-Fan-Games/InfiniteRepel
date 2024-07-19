@@ -22,16 +22,17 @@ end
 
 class PokemonGlobalMetadata
   attr_accessor :infRepel
+  attr_accessor :repel
 end
 
 def pbToggleInfiniteRepel()
-if !$PokemonGlobal.infRepel
-  Kernel.pbMessage(INFREPEL_MESSAGE)
-else
-  Kernel.pbMessage(INFREPEL_MESSAGE_OFF)
-end
-$PokemonGlobal.infRepel = !$PokemonGlobal.infRepel
-return 0
+  if !$PokemonGlobal.infRepel
+    Kernel.pbMessage(INFREPEL_MESSAGE)
+  else
+    Kernel.pbMessage(INFREPEL_MESSAGE_OFF)
+  end
+  $PokemonGlobal.infRepel = !$PokemonGlobal.infRepel
+  return 0
 end
 
 ItemHandlers::UseFromBag.add(:INFREPEL,proc{|item| pbToggleInfiniteRepel() })
@@ -39,7 +40,8 @@ ItemHandlers::UseText.add(:INFREPEL, proc { |item| next ($PokemonGlobal.infRepel
 
 alias pbBattleOnStepTakenOverride pbBattleOnStepTaken 
 def pbBattleOnStepTaken(repel_active)
-  pbBattleOnStepTakenOverride($PokemonGlobal.infRepel)
+  repel = ($PokemonGlobal.infRepel  || $PokemonGlobal.repel > 0 || repel_active)
+  pbBattleOnStepTakenOverride(repel)
 end
 
 if ADD_REPEL_TOGGLE_TO_POKEGEAR
