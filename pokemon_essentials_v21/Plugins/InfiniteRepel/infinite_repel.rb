@@ -28,8 +28,10 @@ end
 def pbToggleInfiniteRepel()
   if !$PokemonGlobal.infRepel
     Kernel.pbMessage(INFREPEL_MESSAGE)
+    $bag.replace_item(:INFREPELOFF, :INFREPEL)
   else
     Kernel.pbMessage(INFREPEL_MESSAGE_OFF)
+    $bag.replace_item(:INFREPELOFF, :INFREPEL)
   end
   $PokemonGlobal.infRepel = !$PokemonGlobal.infRepel
   return 0

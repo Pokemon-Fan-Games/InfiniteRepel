@@ -4,14 +4,9 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
 
 # Implementacion
 
-<<<<<<< Updated upstream
-1. Crea el item en el PBS/items.txt con el siguiente formato:
-   1. En V16 `XXX,INFREPEL,Repelente Infinito,Repelente Infinito,8,0,"Repelente infinito activalo y desactivalo cuando quieras",2,0,6,,,false`
-=======
 1. Crea estos 2 items en el PBS/items.txt con el siguiente formato:
    1. En la V16 `XXX,INFREPEL,Repelente Infinito,Repelente Infinito,8,0,"El Repelente infinito está activado",2,0,6`
    2. En la V16 `XXX,INFREPELOFF,Repelente Infinito,Repelente Infinito,8,0,"El Repelente infinito está desactivado",2,0,6`
->>>>>>> Stashed changes
    Reemplaza XXX por el siguiente número disponible en la lista de items.
    3. V21 Agrega el siguiente codigo al items.txt
       ```
@@ -22,17 +17,20 @@ Item clave inspirado en esta funcionalidad del Pokémon Radical Red. Al usarlo, 
       Price = 0
       FieldUse = Direct
       Flags = KeyItem
-      Description = Un repelente que nunca se gasta, solo activalo o desactivalo cuando lo necesites.
+      Description = El Repelente infinito está activado.
+
+      [INFREPELOFF]
+      Name = Repelente Infinito
+      NamePlural = Repelente Infinito
+      Pocket = 8
+      Price = 0
+      FieldUse = Direct
+      Flags = KeyItem
+      Description = El Repelente infinito está desactivado.
       ```
-<<<<<<< Updated upstream
-2. **OPCIONAL** agregar un ícono para el item:
-   1. En Essentials V16: Crea un icono para el item en Graphics/Icons con el nombre "iconxxx.png" donde xxx es el número del item.
-   2. En Essentials V21: Crea un icono para el item en Graphics/Icons con el nombre "INFREPEL.png".
-=======
 2. Agregar los íconos para los item:
    1. En Essentials V16: Crea un icono para el item en Graphics/Icons con el nombre "iconxxx.png"para el repelente activo pueden usar ![este icono](assets/INREPEL.png) donde xxx es el número del item y luego el "iconxxx.png" del repelente desactivado pueden usar ![este icono](assets/INREPELOFF.png).
    2. En Essentials V19+: Crea un icono para el item en Graphics/Icons con el nombre "INFREPEL.png".
->>>>>>> Stashed changes
 3. **OPCIONAL** Cambiar el texto al seleccionar el item de "Usar" a "Activar" cuando esta desactivado y "Desactivar" cuando este activado.
    1. _**En Essentials V16:**_
       1. En el script `PScreen_Bag` arriba de la declaracion de la clase `PokemonBagScreen` agregar este snippet para tener acceso al atributo infRepel del $PokemonGlobal:
